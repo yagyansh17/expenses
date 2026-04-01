@@ -93,8 +93,10 @@ const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov",
 const SHEET_NAME="Expenses";
 const HEADER=["ID","Date","Description","Amount","Category","Payer","Note"];
 
-let CFG=JSON.parse(localStorage.getItem("yt_cfg2")||"{}");
-// CFG = { clientId, sheetId }
+let CFG=JSON.parse(localStorage.getItem("yt_cfg2")||JSON.stringify({
+  clientId:"228354843386-cc1tdkhsgn33386knd855em1sjjgg86t.apps.googleusercontent.com",
+  sheetId:"121wpQx5SM-ClNVww_S9wyMMDsfExGWwO5FiQYxNxJAk"
+}));
 let accessToken=null;
 let tokenExpiry=0;
 let state={
